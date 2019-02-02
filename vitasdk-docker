@@ -1,0 +1,2 @@
+#!/bin/bash
+exec docker run -v "$(pwd):/build" --rm -it vitasdk-docker "$@"
