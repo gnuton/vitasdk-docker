@@ -12,8 +12,8 @@ Quick start
 ---------------
 
     cd your-vita-project
-    docker run -v "$PWD:/build" -it gnuton/vitasdk-docker
-
+    docker run -v "$PWD:/build" -it --rm gnuton/vitasdk-docker
+    
 Build the image
 ---------------
 In case you wanna build the image by yourself instead of pulling it from docker hub:
