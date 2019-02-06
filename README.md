@@ -1,3 +1,7 @@
+![alt text](https://img.shields.io/docker/automated/gnuton/vitasdk-docker.svg?style=flat)
+![alt text](https://img.shields.io/docker/build/gnuton/vitasdk-docker.svg?style=flat)
+
+
 Vita SDK in a Docker Image
 ==========================
 
