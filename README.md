@@ -6,62 +6,18 @@
 
 Vita SDK in a Docker Image
 ==========================
+Just another Docker image containing the Vita SDK.
 
-This is based on [pspdev-docker](https://github.com/pspdev/pspdev-docker).
-
-Get the image
+Quick start
 ---------------
 
-    docker pull gnuton/vitasdk-docker
-
+    cd your-vita-project
+    docker run -v "$PWD:/build" -it gnuton/vitasdk-docker
 
 Build the image
 ---------------
+In case you wanna build the image by yourself instead of pulling it from docker hub:
 
     docker build -t vitasdk-docker .
-
-Symlink the helper script
--------------------------
-
-Assuming you have a `~/.local/bin` folder and it's in your `$PATH`:
-
-    ln -s $(pwd)/vitasdk-docker ~/.local/bin
-
-Alternatively, you can also copy the script somewhere.
-
-Using it
---------
-
-The directory where you run the script gets exposed to the
-Docker image as `/build/`, and this is also the working
-directory. This allows you to run e.g.:
-
-    vitasdk-docker make
-
-You can also just run a shell by running it without args:
-
-    vitasdk-docker
-
-Note that only the current folder is exported, so you can't
-do a `cmake ..` in a build folder, for this, use the shell:
-
-    vitasdk-docker
-    mkdir build
-    cd build
-    cmake ..
-
-Once this is set up, you can use the script from outside
-(again, from the parent folder, so it can find source files):
-
-    vitasdk-docker make -C build
-
-Saving and loading
-------------------
-
-Save the image:
-
-    docker save vitasdk-docker | bzip2 > vitasdk-docker.tar.bz2
-
-Load the image:
-
-    docker load < bzip2 -dc vitasdk-docker.tar.bz2
+    
+    
