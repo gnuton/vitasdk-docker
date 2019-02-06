@@ -7,6 +7,12 @@ Vita SDK in a Docker Image
 
 This is based on [pspdev-docker](https://github.com/pspdev/pspdev-docker).
 
+Get the image
+---------------
+
+    docker pull gnuton/vitasdk-docker
+
+
 Build the image
 ---------------
 
