@@ -8,7 +8,7 @@ Quick start
 ---------------
 
     cd your-vita-project
-    docker run -v "$PWD:/build" -it --rm gnuton/vitasdk-docker
+    docker run -v "$PWD:/build/git" -it --rm gnuton/vitasdk-docker
     
 Build the image
 ---------------
@@ -23,6 +23,3 @@ Building PS Vita apps in a docker container have several advantages:
  - Faster - Installing the VitaSDK for every build it's really time consuming
 
 If you are interested in this solution. please have a look at this [simple template](https://github.com/gnuton/vitasdk-docker-testapp-trevis)
-    
-    
-    
