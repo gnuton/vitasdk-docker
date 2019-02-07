@@ -1,7 +1,3 @@
-[
-  ![alt text](https://img.shields.io/docker/automated/gnuton/vitasdk-docker.svg?style=flat)
-  ![alt text](https://img.shields.io/docker/build/gnuton/vitasdk-docker.svg?style=flat)
-](https://cloud.docker.com/repository/docker/gnuton/vitasdk-docker/builds)
 [![Docker Pulls](https://img.shields.io/docker/pulls/gnuton/vitasdk-docker.svg)](https://hub.docker.com/r/gnuton/vitasdk-docker)
 
 Vita SDK in a Docker Image
@@ -19,5 +15,14 @@ Build the image
 In case you wanna build the image by yourself instead of pulling it from docker hub:
 
     docker build -t vitasdk-docker .
+    
+Let travis build your vita code using Vita SDK docker image
+---------------
+Building PS Vita apps in a docker container have several advantages:
+ - More reliable - Travis from time to time fails to installd the VitaSDK
+ - Faster - Installing the VitaSDK for every build it's really time consuming
+
+If you are interested in this solution. please have a look at this [simple template](https://github.com/gnuton/vitasdk-docker-testapp-trevis)
+    
     
     
