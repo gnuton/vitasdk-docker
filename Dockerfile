@@ -6,7 +6,7 @@ env PATH ${PATH}:${VITASDK}/bin
 
 WORKDIR /build
 
-RUN apt update && apt install -y sudo wget curl make git-core cmake xz-utils
+RUN apt update && apt install -y sudo wget curl make git-core cmake xz-utils python
 
 RUN \
     git clone https://github.com/vitasdk/vdpm && \
