@@ -2,14 +2,14 @@
 
 Vita SDK in a Docker Image
 ==========================
-Just another Docker image containing the Vita SDK (forkception). Just update CMake to last version to support last functions :smiley:
+Just another Docker image containing the Vita SDK (forkception). I just update vitasdk-docker to use the lastest version of CMake to support last functions :smiley:
 
 Quick start
 ---------------
 Docker images are built on daily basis and always contain the latest nightly VitaSDK build.
 
     cd your-vita-project
-    docker run -v "$PWD:/build/git" -it --rm gnuton/vitasdk-docker
+    docker run -v "$PWD:/build/git" -it --rm applelo/vitasdk-docker
     
 Build the image
 ---------------
@@ -22,5 +22,3 @@ Travis CI ♡ VitaSDK Docker
 Building PS Vita apps in a docker container have several advantages:
  - More reliable - Travis from time to time fails to installd the VitaSDK
  - Faster - Installing the VitaSDK for every build it's really time consuming
-
-If you are interested in this solution. please have a look at this [simple template](https://github.com/gnuton/vitasdk-docker-testapp-trevis)
