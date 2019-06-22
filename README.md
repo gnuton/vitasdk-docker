@@ -23,8 +23,8 @@ Building PS Vita apps in a docker container have several advantages:
    Do you have a PS Vita project on GitHub? Look at this [simple template](https://github.com/gnuton/vitasdk-docker-testapp-trevis) or fork  it if it's a new project.
 3. <b>Circle CI</b> TODO
     
-Build the image
----------------
+♡ Build the image ♡
+--------------------
 In case you REALLY REALLY wanna make changes to the Docker file itself and build it, please run:
 ```bash
     docker build -t vitasdk-docker .
