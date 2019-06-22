@@ -1,8 +1,8 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/gnuton/vitasdk-docker.svg)](https://hub.docker.com/r/gnuton/vitasdk-docker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/applelo/vitasdk-docker.svg)](https://hub.docker.com/r/gnuton/vitasdk-docker)
 
 Vita SDK in a Docker Image
 ==========================
-Just another Docker image containing the Vita SDK.
+Just another Docker image containing the Vita SDK (forkception). Just update CMake to last version to support last functions :smiley:
 
 Quick start
 ---------------
