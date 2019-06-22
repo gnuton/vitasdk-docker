@@ -11,8 +11,8 @@ RUN apt-get update \
     	software-properties-common \
     	wget \
 	&& add-apt-repository -y ppa:ubuntu-toolchain-r/test \
-	&& apt-get update 
-	&& apt-get install -y sudo cmake
+	&& apt-get update \
+	&& apt-get install -y sudo cmake \
 	&& apt-get install -y sudo curl make git-core xz-utils python
 	
 
