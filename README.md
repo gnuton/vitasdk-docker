@@ -1,4 +1,4 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/applelo/vitasdk-docker.svg)](https://hub.docker.com/r/gnuton/vitasdk-docker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/applelo/vitasdk-docker.svg)](https://hub.docker.com/r/applelo/vitasdk-docker)
 
 Vita SDK in a Docker Image
 ==========================
