@@ -11,7 +11,7 @@ RUN apt update && apt install -y sudo wget curl make git-core cmake xz-utils pyt
 
 RUN wget https://github.com/Kitware/CMake/releases/download/v3.14.5/${CMAKE_INSTALL_SCRIPT} && \
 	chmod +x ${CMAKE_INSTALL_SCRIPT}  && \
-	./${CMAKE_INSTALL_SCRIPT} --prefix=$HOME/usr --exclude-subdir --skip-license
+	./${CMAKE_INSTALL_SCRIPT} --prefix=/usr/local/src --exclude-subdir --skip-license
 
 RUN \
     git clone https://github.com/vitasdk/vdpm && \
