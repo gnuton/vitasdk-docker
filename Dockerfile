@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-MAINTAINER Thomas Perl <m@thp.io>
+MAINTAINER Applelo
 
 env VITASDK /usr/local/vitasdk
 env PATH ${PATH}:${VITASDK}/bin
@@ -12,7 +12,9 @@ RUN apt-get update \
     	wget \
 	&& add-apt-repository -y ppa:ubuntu-toolchain-r/test \
 	&& apt-get update 
-	&& apt-get install -y cmake
+	&& apt-get install -y sudo cmake
+	&& apt-get install -y sudo curl make git-core xz-utils python
+	
 
 RUN apt install -y sudo wget curl make git-core xz-utils python
 
