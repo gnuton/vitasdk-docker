@@ -8,7 +8,7 @@ env CMAKE_INSTALL_SCRIPT=cmake-3.14.5-Linux-x86_64.sh
 
 WORKDIR /build
 
-RUN apt update && apt install -y sudo wget curl make git-core xz-utils python
+RUN apt update && apt install -y sudo wget curl make git-core xz-utils python pkg-config
 
 RUN mkdir /usr/bin/cmake
 
