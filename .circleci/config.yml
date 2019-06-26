@@ -15,7 +15,7 @@ jobs:
             - {run: {name: 'Build Docker image', command: 'docker build -t $IMAGE_NAME:latest .'}}
             - {run: {name: 'Archive Docker image', command: 'docker save -o image $IMAGE_NAME'}}
             - {persist_to_workspace: {root: ., paths: [./image.tar]}}
-    publiss:
+    publish:
         executor: docker-publisher
         steps:
             - {attach_workspace: {at: /tmp/workspace}}
