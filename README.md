@@ -37,4 +37,4 @@ Build the image
 In case you REALLY REALLY wanna make changes to the Docker file itself and build it, please run:
 ```bash
     docker build -t vitasdk-docker .
-```bash    
+``` 
