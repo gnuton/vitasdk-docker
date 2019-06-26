@@ -30,6 +30,7 @@ Every day at midnight CI scripts craft a new juicy docker image with the latest 
 If you wanna build your code always against the latest cutting-edge VitaSDK code, please get gnuton/vitasdk-docker:<b>latest</b> images.
 Otherwise, you can stick to a specific image version too (eg gnuton/vitasdk-docker:<b>20190626</b> for the 2019-06-26 snapshot).
 The list of available image versions can be found [here](https://cloud.docker.com/repository/registry-1.docker.io/gnuton/vitasdk-docker/tags).
+
 ♡ Build the image ♡
 --------------------
 In case you REALLY REALLY wanna make changes to the Docker file itself and build it, please run:
