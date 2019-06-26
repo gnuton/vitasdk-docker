@@ -31,5 +31,5 @@ workflows:
             - {build: {filters: {branches: {only: master}}}}
             - {publish: {requires: [build], filters: {branches: {only: master}}}}
         triggers:
-            - {schedule: {cron: "0 0 * * *"}}
+            - {schedule: {cron: "0 0 * * *"}, filters: {branches: {only: master}}}
 
