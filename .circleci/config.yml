@@ -3,7 +3,6 @@ executors:
     docker-publisher:
         environment:
             IMAGE_NAME: gnuton/vitasdk-docker
-            DOCKER_TAG: '$(date +%Y%m%d)'
         docker:
             - {image: 'circleci/buildpack-deps:stretch'}
 jobs:
@@ -22,7 +21,7 @@ jobs:
             - setup_remote_docker
             - {run: {name: 'Load archived Docker image', command: 'docker load -i /tmp/workspace/image.tar'}}
             - {run: {name: 'Publish Docker Latest Image to Docker Hub', command: "echo \"$DOCKERHUB_PASS\" | docker login -u \"$DOCKERHUB_USERNAME\" --password-stdin\ndocker push $IMAGE_NAME:latest\n"}}
-            - {run: {name: 'Publish Docker Tagged Image to Docker Hub', command: "echo \"$DOCKERHUB_PASS\" | docker login -u \"$DOCKERHUB_USERNAME\" --password-stdin\ndocker push $IMAGE_NAME:$DOCKER_TAG\n"}}
+            - {run: {name: 'Publish Docker Tagged Image to Docker Hub', command: "export DOCKER_TAG=$(date +%Y%m%d); echo \"$DOCKERHUB_PASS\" | docker login -u \"$DOCKERHUB_USERNAME\" --password-stdin\ndocker push $IMAGE_NAME:${DOCKER_TAG}\n"}}
 workflows:
     version: 2
     build-master:
