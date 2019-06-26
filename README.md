@@ -1,8 +1,9 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/gnuton/vitasdk-docker.svg)](https://hub.docker.com/r/gnuton/vitasdk-docker)
+[![CircleCI](https://circleci.com/gh/gnuton/vitasdk-docker/tree/master.svg?style=svg)](https://circleci.com/gh/gnuton/vitasdk-docker/tree/master)
 
 ♡ Vita SDK in a Docker Image ♡
 ==============================
-An always up-to-date Docker image containing the Vita SDK built on top of Ubuntu.
+Daily fresh Vita SDK Docker images.
 
 ♡ Why should I use PSVita SDK Docker images? ♡
 -----------------------------------------------
@@ -22,7 +23,13 @@ Building PS Vita apps in a docker container have several advantages:
 2. <b>Travis CI</b>
    Do you have a PS Vita project on GitHub? Look at this [simple template](https://github.com/gnuton/vitasdk-docker-testapp-trevis) or fork  it if it's a new project.
 3. <b>Circle CI</b> TODO
-    
+
+♡ Versioned Nightly ♡
+----------------------
+Every day at midnight CI scripts craft a juicy docker image with the latest snapshot of VitaSDK.
+If you wanna build your code always against the latest cutting-edge VitaSDK code, please get gnuton/vitasdk-docker:<b>latest</b> images.
+Otherwise, if you like, you can stick to a specific image version too (eg gnuton/vitasdk-docker:<b>20190626</b> for the 2019-06-26 snapshot).
+
 ♡ Build the image ♡
 --------------------
 In case you REALLY REALLY wanna make changes to the Docker file itself and build it, please run:
