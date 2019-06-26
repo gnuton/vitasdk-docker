@@ -15,7 +15,8 @@ jobs:
             - {run: {name: 'Build Tagged Docker image', command: 'export DOCKER_TAG=$(date +%Y%m%d); docker build -t $IMAGE_NAME:${DOCKER_TAG} .'}}  
             - {run: {name: 'Archive Latest Docker image', command: 'docker save -o image_latest.tar $IMAGE_NAME:latest'}}
             - {run: {name: 'Archive Tagged Docker image', command: 'export DOCKER_TAG=$(date +%Y%m%d); docker save -o image_tagged.tar $IMAGE_NAME:${DOCKER_TAG}'}}  
-            - {persist_to_workspace: {root: ., paths: [./image.tar]}}
+            - {persist_to_workspace: {root: ., paths: [./image_latest.tar]}}
+            - {persist_to_workspace: {root: ., paths: [./image_tagged.tar]}}  
     publish:
         executor: docker-publisher
         steps:
