@@ -3,7 +3,6 @@ executors:
     docker-publisher:
         environment:
             IMAGE_NAME: gnuton/vitasdk-docker
-            DOCKER_TAG2: '$(date +%Y%m%d)'
         docker:
             - {image: 'circleci/buildpack-deps:stretch'}
 jobs:
@@ -12,7 +11,6 @@ jobs:
         steps:
             - checkout
             - setup_remote_docker
-            - {run: {name: 'Debug', command:'env'}}  
             - {run: {name: 'Build Docker image', command: 'docker build -t $IMAGE_NAME:latest .'}}
             - {run: {name: 'Archive Docker image', command: 'docker save -o image.tar $IMAGE_NAME'}}
             - {persist_to_workspace: {root: ., paths: [./image.tar]}}
