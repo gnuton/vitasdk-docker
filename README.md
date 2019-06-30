@@ -5,12 +5,20 @@
 ==============================
 Daily fresh Vita SDK Docker images.
 
+Features
+--------
+* Image based on Ubuntu 18.04
+* Always with latest stable CMake
+* Docker images are built every night at midnight
+* Versioned Nightlies
+* Tested on the most popular CI/CD envs (Travis/CircleCI/Azure/...) 
+
 Why should I use PSVita SDK Docker images?
 -----------------------------------------------
 Building PS Vita apps in a docker container have several advantages:
  - More reliable - Consistent building environment. You can run it in TravisCI, CircleCI or your local machine.
  - Faster - Installing the VitaSDK for every build it's really time consuming
- - Hassle free - Do not spend time in installing a working environment. All you need to build your PS Vita app is here.
+ - Hassle free - Do not spend time in setting up a working environment. All you need to build your PS Vita app is this image.
  
 Quick start
 ---------------
