@@ -27,5 +27,5 @@ RUN \
     ./bootstrap-vitasdk.sh && \
     ./install-all.sh
 
-USER user
+USER root
 CMD ["/bin/bash"]
