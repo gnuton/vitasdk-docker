@@ -7,7 +7,7 @@ Daily fresh Vita SDK Docker images.
 
 Features
 --------
-* Image based on Ubuntu 18.04
+* Image based on Ubuntu 22.04
 * Always with latest stable CMake
 * Docker images are built every night at midnight
 * Versioned Nightlies
