@@ -16,7 +16,7 @@ RUN \
     wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | sudo apt-key add - && \
     apt-add-repository 'deb https://apt.kitware.com/ubuntu/ jammy main' && \
     apt-get update && \
-    apt-get install -y cmake && \    
+    apt-get install -y cmake && \
     echo "Adding non-root user..." && \
     useradd -ms /bin/bash user && \
     echo "user:user" | chpasswd && adduser user sudo
