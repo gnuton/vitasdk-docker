@@ -1,20 +1,20 @@
-FROM ubuntu:18.04
-MAINTAINER Antonio Aloisio <gnuton@gnuton.org>
-MAINTAINER Thomas Perl <m@thp.io>
+FROM ubuntu:22.04
+LABEL maintainer="Antonio Aloisio <gnuton@gnuton.org>, Thomas Perl <m@thp.io>"
 
-env VITASDK /usr/local/vitasdk
-env PATH ${PATH}:${VITASDK}/bin
+ENV VITASDK=/usr/local/vitasdk
+ENV PATH=${PATH}:${VITASDK}/bin
 
 WORKDIR /build
 
 RUN \
     DEBIAN_FRONTEND=noninteractive && \
+    ln -fs /usr/share/zoneinfo/UTC /etc/localtime && \
+    echo "UTC" > /etc/timezone && \
     echo "Installing dependencies..." && \
     apt-get update && \
-    apt-get install -y sudo wget curl make git-core xz-utils python apt-transport-https ca-certificates gnupg software-properties-common wget && \
-    echo "Installing Latest CMake Version..." && \
+    apt-get install -y sudo wget curl make git-core xz-utils python3 apt-transport-https ca-certificates gnupg software-properties-common bzip2 && \
     wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | sudo apt-key add - && \
-    apt-add-repository 'deb https://apt.kitware.com/ubuntu/ bionic main' && \
+    apt-add-repository 'deb https://apt.kitware.com/ubuntu/ jammy main' && \
     apt-get update && \
     apt-get install -y cmake && \
     echo "Adding non-root user..." && \
